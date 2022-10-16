@@ -2,7 +2,12 @@
 }
 
 /* Desktop Body */
-
+table {
+  width: 15rem;
+}
+table th, table td {
+  border: 1px solid black;
+}
 
 /* Tablet */
 @media only screen and (max-width: 70em) {

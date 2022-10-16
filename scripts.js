@@ -8,32 +8,67 @@ function Book(author, title, pages, read) {
 }
 
 // get input and store in myLibrary
-function addBookToLibrary(author, title, pages, read) {
-  let book = new Book(author, title, pages, read)
-  myLibrary.push(book)
-  
-  book = null
-}
-addBookToLibrary("Raul", "The Misfits", 120, true)
-addBookToLibrary("Raul", "The Misfits", 120, false)
+function addBookToLibrary() {
+  let authorElement = document.querySelector('#author')
+  let titleElement = document.querySelector('#title')
+  let pagesElement = document.querySelector('#pages')
+  let readElement = document.querySelector('#read')
 
-console.log(myLibrary)
+  let book = new Book(
+    authorElement.value,
+    titleElement.value,
+    pagesElement.value,
+    readElement.checked
+  )
+
+  myLibrary.push(book)
+  book = null
+
+  console.log(myLibrary)
+}
 
 // loop through myLibrary and display on html
 function libraryLoop() {
-  
+  let libraryElement = document.querySelector('.library')
+
+  while (libraryElement.firstChild) {
+    libraryElement.removeChild(libraryElement.firstChild)
+  }
+
+  for (let i = 0; i < myLibrary.length; i++) {
+    let row = document.createElement('tr')
+
+    let cell1 = document.createElement('td')
+    cell1.textContent = `${myLibrary[i].author}`
+    row.appendChild(cell1)
+    let cell2 = document.createElement('td')
+    cell2.textContent = `${myLibrary[i].title}`
+    row.appendChild(cell2)
+    let cell3 = document.createElement('td')
+    cell3.textContent = `${myLibrary[i].pages}`
+    row.appendChild(cell3)
+    let cell4 = document.createElement('td')
+    cell4.textContent = `${myLibrary[i].read}`
+    row.appendChild(cell4)
+
+    libraryElement.appendChild(row)
+  }
 }
+
+let submitElement = document.querySelector('#submit')
+submitElement.addEventListener('click', function() {
+  addBookToLibrary()
+  libraryLoop()
+})
 
 /*
 ideas:
--create a function to delete a book
+-clean up the inputs
 
 Instructions:
 1. Done
-2. create function that takes user input and
-   stores book in array
-3. create function that loops through myLibrary
-   and displays book in cards
+2. Done
+3. Done
 4. add 'NEW BOOK' button that brings up form
 5. add button on display to remove book
     look into data-attribute

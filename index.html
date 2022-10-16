@@ -10,34 +10,41 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="library">
-
-  </div>
   <button>NEW BOOK</button>
-  <form action="">
-    <label for="">
+  <form>
+    <label for="author">
       Author:
-      <input type="text">
+      <input type="text" id="author" name="author">
     </label>
     <br>
-    <label for="">
+    <label for="title">
       Title:
-      <input type="text">
+      <input type="text" id="title" name="title">
     </label>
     <br>
-    <label for="">
+    <label for="pages">
       Number of pages:
-      <input type="number">
+      <input type="number" id="pages" name="pages">
     </label>
     <br>
-    <p>Read?</p>
-    <input type="radio" name="read" id="yes" value="yes">
-    <label for="yes">Yes</label>
-    <input type="radio" name="read" id="no" value="no">
-    <label for="no">No</label>
-    <br>
-    <input type="submit" value="Sumbit">
+    <label for="read">
+      Read?
+      <input type="checkbox" name="read" id="read">
+    </label>
   </form>
+  <button id="submit">Submit</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Pages</th>
+        <th>Read</th>
+      </tr>
+    </thead>
+    <tbody class="library">
+    </tbody>
+  </table>
 </body>
 </html>
 
