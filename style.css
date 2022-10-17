@@ -2,8 +2,11 @@
 }
 
 /* Desktop Body */
+.main-form, #submit {
+  display: none;
+}
 table {
-  width: 15rem;
+  width: 20rem;
 }
 table th, table td {
   border: 1px solid black;
