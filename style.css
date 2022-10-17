@@ -1,15 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700;800&display=swap');
+
 :root {
 }
 
 /* Desktop Body */
+body {
+  background-color: lightblue;
+}
+nav {
+  width: 40rem;
+  margin: 3rem auto 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+.main-title {
+  font-family: 'Karla',Arial,Helvetica,sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #141414;
+  grid-column: 2/3;
+}
+.new-book {
+  font-family: 'Karla',Arial,Helvetica,sans-serif;
+  grid-column: 3/-1;
+  height: 2rem;
+  width: 8rem;
+  justify-self: end;
+  border-style: none;
+  border-radius: 0.35rem;
+  color: white;
+  font-size: 1rem;
+
+  background-color: gray;
+}
+.new-book:hover, #submit:hover, .remove-button:hover, .read-button:hover {
+  cursor: pointer;
+}
 .main-form, #submit {
   display: none;
 }
-table {
-  width: 20rem;
+.main-form {
+  font-family: 'Karla',Arial,Helvetica,sans-serif;
+  width: 40rem;
+  height: 6rem;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
 }
-table th, table td {
-  border: 1px solid black;
+.main-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main-form input[type="text"], .main-form input[type="number"] {
+  border-style: none;
+  height: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 0.1rem;
+  background-color: white;
+}
+.main-form input[type="checkbox"] {
+  border-style: none;
+  height: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 0.1rem;
+}
+.main-form label[for="author"] {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.main-form label[for="title"] {
+  grid-column: 2/-1;
+  grid-row: 1/3;
+}
+.main-form label[for="pages"] {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+.main-form label[for="read"] {
+  grid-column: 2/-1;
+  grid-row: 3/5;
+}
+.submit-container {
+  width: 40rem;
+  margin: 0.5rem auto 1rem auto;
+}
+#submit {
+  height: 2rem;
+  width: 8rem;
+  border-style: none;
+  border-radius: 0.35rem;
+  color: white;
+  background-color: gray;
+}
+.table {
+  width: 40rem;
+  margin: 0 auto;
+  font-family: 'Karla',Arial,Helvetica,sans-serif;
+}
+table thead {
+  color: white;
+  height: 3rem;
+
+  display: flex;
+}
+.table thead tr {
+  width: 100%;
+  display: flex;
+}
+.table thead tr th {
+  width: calc(100%/6);
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  background-color: cornflowerblue;
+}
+table thead tr th:first-child {
+  border-top-left-radius: 0.35rem;
+}
+table thead tr th:last-child {
+  border-top-right-radius: 0.35rem;
+}
+table tbody {
+  color: #141414;
+}
+.table tbody tr {
+  height: 2.5rem;
+  display: flex;
+  border-bottom: 1px solid rgb(206, 232, 255);
+}
+.table tbody tr:last-child {
+  border-style: none;
+}
+.table tbody tr td {
+  width: calc(100%/6);
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+
+  background-color: aliceblue;
+}
+table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 0.35rem;
+}
+table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.35rem;
+}
+.table .remove-button, .table .read-button {
+  height: 1.75rem;
+  width: 5rem;
+  border-style: none;
+  border-radius: 0.35rem;
+  color: white;
+  background-color: gray;
 }
 
 /* Tablet */
