@@ -1,11 +1,13 @@
 let myLibrary = [];
 
-// Book constructor
-function Book(author, title, pages, read) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+// Book class
+class Book {
+  constructor(author, title, pages, read) {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 // get input and store in myLibrary
@@ -137,16 +139,3 @@ newBookElement.addEventListener('click', function() {
     toggle = false
   }
 })
-
-/*
-ideas:
--pointer cursor on remove and read buttons
-
-Instructions:
-1. Done
-2. Done
-3. Done
-4. Done
-5. Done
-6. Done
-*/
