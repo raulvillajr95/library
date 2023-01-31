@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="scripts.js" defer></script>
-  <title>Document</title>
-</head>
-<body>
-  <nav class="nav">
-    <h1 class="main-title">Library</h1>
-    <button class="new-book">NEW BOOK</button>
-  </nav>
-  <form class="main-form">
-    <label for="author">
-      Author:
-      <input type="text" id="author" name="author" required>
-    </label>
-    <label for="title">
-      Title:
-      <input type="text" id="title" name="title" required>
-    </label>
-    <label for="pages">
-      Number of pages:
-      <input type="number" id="pages" name="pages" required>
-    </label>
-    <label for="read">
-      Read?
-      <input type="checkbox" name="read" id="read">
-    </label>
-  </form>
-  <div class="submit-container">
-    <button id="submit" form="main-form">SUBMIT</button>
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Author</th>
-        <th>Title</th>
-        <th>Pages</th>
-        <th>Read</th>
-        <th>Remove</th>
-        <th>Read Toggle</th>
-      </tr>
-    </thead>
-    <tbody class="library">
-    </tbody>
-  </table>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <h1 class="main-title">Library</h1>
+      <button class="new-book">NEW BOOK</button>
+    </nav>
+    <form class="main-form">
+      <label for="author">
+        Author:
+        <input type="text" id="author" name="author" required />
+      </label>
+      <label for="title">
+        Title:
+        <input type="text" id="title" name="title" required />
+      </label>
+      <label for="pages">
+        Number of pages:
+        <input type="number" id="pages" name="pages" required />
+      </label>
+      <label for="read">
+        Read?
+        <input type="checkbox" name="read" id="read" required />
+      </label>
+    </form>
+    <div class="submit-container">
+      <button id="submit" form="main-form">SUBMIT</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th>Pages</th>
+          <th>Read</th>
+          <th>Remove</th>
+          <th>Read Toggle</th>
+        </tr>
+      </thead>
+      <tbody class="library"></tbody>
+    </table>
+  </body>
 </html>
 
 <!--
